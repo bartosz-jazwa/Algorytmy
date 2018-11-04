@@ -26,11 +26,17 @@ public class Osoba implements Comparable<Osoba>{
 
     @Override
     public boolean equals(Object o) {
-        //if (this == o) return true;
+        if (this == o) return true;
         if (!(o instanceof Osoba)) return false;
         Osoba osoba = (Osoba) o;
         return age == osoba.age &&
                 Objects.equals(name, osoba.name) &&
                 Objects.equals(surname, osoba.surname);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return this.name.length()+this.surname.length()+this.age;
     }
 }

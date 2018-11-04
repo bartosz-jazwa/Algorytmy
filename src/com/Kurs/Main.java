@@ -31,11 +31,29 @@ public class Main {
 
         //Fibbonnaci fibbonnaci = new Fibbonnaci();
         //System.out.println(fibbonnaci.fibonacci(10));
-        Osoba osoba = new Osoba("Adam", "Nowak", 18);
-        Osoba[] osoby = {new Osoba("Jan","Kowalski",19),new Osoba("Adam", "Nowak", 18),new Osoba("John","Smith",20)};
+        /*Osoba osoba = new Osoba("Adam", "Nowak", 18);
+        Osoba[] osoby = {new Osoba("Jan","Kowalski",19),
+                new Osoba("John","Smith",20),
+                new Osoba("A", "B", 21),
+                new Osoba("C", "D", 22),
+                new Osoba("E", "F", 23)};
         SearchAlgorithm<Osoba> linearSearch = new LinearSearch<>();
-        System.out.println(linearSearch.search(new Osoba("Adam", "Nowak", 18),osoby));
+        System.out.println(linearSearch.search(osoby[1],osoby));*/
+        BubbleSort bubbleSort = new BubbleSort();
+        Integer[] liczby = {99,21,32,12,54,19,18,17,16};
+        //BubbleSort.swap(0,1,liczby);
+        //BubbleSort.printElemInTriangle(liczby);
+        //Integer[] noweLiczby = bubbleSort.sort(liczby);
+        //int index = bubbleSort.min(liczby);
 
+        //System.out.println(index);
+        //BubbleSort.printElemIndLine(liczby);
+        //BubbleSort.printElemIndLineSwap(liczby);
+        SortingAlgorithm selectionSort = new SelectionSort();
+        Integer[] noweLiczby = selectionSort.sort(liczby);
+        for (int l :noweLiczby) {
+            System.out.println(l);
+        }
     }
 
 
